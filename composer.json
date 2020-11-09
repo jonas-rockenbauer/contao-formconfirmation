@@ -1,0 +1,53 @@
+{
+    "name": "jrockenbauer/contao-formconfirmation",
+    "type": "contao-bundle",
+    "description": "Extension for integrate an email confirmation to a Contao form",
+    "homepage": "https://github.com/jonas-rockenbauer",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Jonas Rockenbauer",
+            "homepage": "https://github.com/jonas-rockenbauer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "contao/core-bundle": "4.9.*"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "friendsofphp/php-cs-fixer": "^2.12",
+        "phpunit/phpunit": "^5.7.26",
+        "symfony/phpunit-bridge": "^3.2"
+    },
+    "extra": {
+        "contao-manager-plugin": "Jrockenbauer\\ContaoFormconfirmation\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jrockenbauer\\ContaoFormconfirmation\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jrockenbauer\\ContaoFormconfirmation\\Tests\\": "tests/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/jonas-rockenbauer/contao-formconfirmation/issues",
+        "source": "https://github.com/jonas-rockenbauer/contao-formconfirmation"
+    }
+}
