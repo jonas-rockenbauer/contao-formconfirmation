@@ -1,65 +1,64 @@
 <?php
 
 /**
- * Table tl_form
+ * Table tl_form.
  */
 
 // fields
-$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailCheck'] = array(
+$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailCheck'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationMailCheck'],
     'exclude' => true,
     'filter' => true,
     'inputType' => 'checkbox',
-    'eval' => array('helpwizard' => true, 'submitOnChange' => true),
+    'eval' => ['helpwizard' => true, 'submitOnChange' => true],
     'sql' => "char(1) NOT NULL default ''",
-);
-$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailSender'] = array(
+];
+$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailSender'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationMailSender'],
     'exclude' => true,
     'filter' => false,
     'inputType' => 'text',
-    'eval' => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
+    'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
     'sql' => "varchar(255) NOT NULL default ''",
-);
-$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailSenderName'] = array(
+];
+$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailSenderName'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationMailSenderName'],
     'exclude' => true,
     'filter' => false,
     'inputType' => 'text',
-    'eval' => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
+    'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
     'sql' => "varchar(255) NOT NULL default ''",
-);
-$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailAnswer'] = array(
+];
+$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailAnswer'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationMailAnswer'],
     'exclude' => true,
     'filter' => false,
     'inputType' => 'text',
-    'eval' => array('mandatory' => false, 'maxlength' => 255, 'tl_class' => 'w50'),
+    'eval' => ['mandatory' => false, 'maxlength' => 255, 'tl_class' => 'w50'],
     'sql' => "varchar(255) NOT NULL default ''",
-);
-$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailSubject'] = array(
+];
+$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailSubject'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationMailSubject'],
     'exclude' => true,
     'filter' => false,
     'inputType' => 'text',
-    'eval' => array('mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'),
+    'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
     'sql' => "varchar(255) NOT NULL default ''",
-);
-$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailText'] = array(
+];
+$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailText'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationMailText'],
     'exclude' => true,
     'filter' => false,
     'inputType' => 'textarea',
-    'eval' => array('mandatory' => true, 'rows' => 15, 'allowHTML' => false, 'tl_class' => 'clr'),
-    'sql' => "text NULL",
-);
-
+    'eval' => ['mandatory' => true, 'rows' => 15, 'allowHTML' => false, 'tl_class' => 'clr'],
+    'sql' => 'text NULL',
+];
 
 // Palettes
 $GLOBALS['TL_DCA']['tl_form']['palettes']['__selector__'][] = 'formConfirmationMailCheck';
 $GLOBALS['TL_DCA']['tl_form']['palettes']['default'] = str_replace(
-    array('storeValues', 'sendViaEmail'),
-    array('storeValues', 'sendViaEmail;{formConfirmationMail_legend:hide},formConfirmationMailCheck'),
+    ['storeValues', 'sendViaEmail'],
+    ['storeValues', 'sendViaEmail;{formConfirmationMail_legend:hide},formConfirmationMailCheck'],
     $GLOBALS['TL_DCA']['tl_form']['palettes']['default']
 );
 
@@ -67,5 +66,5 @@ $GLOBALS['TL_DCA']['tl_form']['palettes']['default'] = str_replace(
 array_insert(
     $GLOBALS['TL_DCA']['tl_form']['subpalettes'],
     count($GLOBALS['TL_DCA']['tl_form']['subpalettes']),
-    array('formConfirmationMailCheck' => 'formConfirmationMailSender,formConfirmationMailSenderName,formConfirmationMailAnswer,formConfirmationMailSubject,formConfirmationMailText')
+    ['formConfirmationMailCheck' => 'formConfirmationMailSender,formConfirmationMailSenderName,formConfirmationMailAnswer,formConfirmationMailSubject,formConfirmationMailText']
 );

@@ -7,5 +7,4 @@ services:
         Symfony\Component\DependencyInjection\ContainerAwareInterface:
             calls:
                 - ["setContainer", ["@service_container"]]
-    Jrockenbauer\ContaoFormconfirmation\Library\MessageGenerator:
-        public: true
+
