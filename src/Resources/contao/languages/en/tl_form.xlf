@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" source-language="de">
+        <body>
+            <trans-unit id="tl_form.formConfirmationMailCheck.0">
+                <source>Activate confirmation email</source>
+            </trans-unit>
+            <trans-unit id="tl_form.formConfirmationMailSender.0">
+                <source>E-mail address of the sender</source>
+            </trans-unit>
+            <trans-unit id="tl_form.formConfirmationMailSenderName.0">
+                <source>Name of the sender</source>
+            </trans-unit>
+            <trans-unit id="tl_form.formConfirmationMailAnswer.0">
+                <source>Mail address for 'Reply to'</source>
+            </trans-unit>
+            <trans-unit id="tl_form.formConfirmationMailSubject.0">
+                <source>Subject of the confirmation mail</source>
+            </trans-unit>
+            <trans-unit id="tl_form.formConfirmationMailText.0">
+                <source>Confirmation email content</source>
+            </trans-unit>
+
+            <trans-unit id="tl_form.formConfirmationMail_legend">
+                <source>Confirmation email</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
+
+
+
+
+
+
+
+
+
