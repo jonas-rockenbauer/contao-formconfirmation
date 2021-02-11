@@ -23,14 +23,17 @@ class ProcessFormDataListener
         array $labels,
         \Contao\Form $form
     ): void {
-        if ($formData['formConfirmationMailCheck'] == 1 && $submittedData['email'] != '') {
+
+        $fieldNameRecipient = !empty($formData['formConfirmationFieldNameRecipient']) ? $formData['formConfirmationFieldNameRecipient'] : 'email';
+
+        if ($formData['formConfirmationMailCheck'] == 1 && $submittedData[$fieldNameRecipient] != '') {
             $objEmail = new Email();
             $objEmail->from = $formData['formConfirmationMailSender'];
             $objEmail->fromName = $formData['formConfirmationMailSenderName'];
             $objEmail->replyTo($formData['formConfirmationMailAnswer']);
             $objEmail->subject = $formData['formConfirmationMailSubject'];
             $objEmail->text = strip_tags($formData['formConfirmationMailText']);
-            $objEmail->sendTo(str_replace(["\n"], '', $submittedData['email']));
+            $objEmail->sendTo(str_replace(["\n"], '', $submittedData[$fieldNameRecipient]));
         }
     }
 }

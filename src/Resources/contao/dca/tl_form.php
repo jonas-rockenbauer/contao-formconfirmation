@@ -21,6 +21,14 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailSender'] = [
     'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
     'sql' => "varchar(255) NOT NULL default ''",
 ];
+$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationFieldNameRecipient'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationFieldNameRecipient'],
+    'exclude' => true,
+    'filter' => false,
+    'inputType' => 'text',
+    'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
+    'sql' => "varchar(255) NOT NULL default 'email'",
+];
 $GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailSenderName'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationMailSenderName'],
     'exclude' => true,
@@ -66,5 +74,5 @@ $GLOBALS['TL_DCA']['tl_form']['palettes']['default'] = str_replace(
 array_insert(
     $GLOBALS['TL_DCA']['tl_form']['subpalettes'],
     count($GLOBALS['TL_DCA']['tl_form']['subpalettes']),
-    ['formConfirmationMailCheck' => 'formConfirmationMailSender,formConfirmationMailSenderName,formConfirmationMailAnswer,formConfirmationMailSubject,formConfirmationMailText']
+    ['formConfirmationMailCheck' => 'formConfirmationFieldNameRecipient,formConfirmationMailSender,formConfirmationMailSenderName,formConfirmationMailAnswer,formConfirmationMailSubject,formConfirmationMailText']
 );

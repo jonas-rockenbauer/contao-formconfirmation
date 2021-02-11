@@ -2,6 +2,9 @@
 <xliff version="1.1">
     <file datatype="php" source-language="fr">
         <body>
+            <trans-unit id="tl_form.formConfirmationFieldNameRecipient.0">
+                <source>Nom du champ contenant l'adresse du destinataire</source>
+            </trans-unit>
             <trans-unit id="tl_form.formConfirmationMailCheck.0">
                 <source>Activer l'envoi d'un mail de confirmation</source>
             </trans-unit>
