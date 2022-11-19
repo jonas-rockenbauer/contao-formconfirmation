@@ -33,6 +33,11 @@ class ProcessFormDataListener
             $objEmail->replyTo($formData['formConfirmationMailAnswer']);
             $objEmail->subject = $formData['formConfirmationMailSubject'];
             $objEmail->text = strip_tags($formData['formConfirmationMailText']);
+
+            if($formData['formConfirmationMailHtml']) {
+                $objEmail->html = $formData['formConfirmationMailHtml'];
+            }
+
             $objEmail->sendTo(str_replace(["\n"], '', $submittedData[$fieldNameRecipient]));
         }
     }
