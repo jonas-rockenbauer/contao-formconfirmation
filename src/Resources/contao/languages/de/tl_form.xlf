@@ -23,6 +23,9 @@
             <trans-unit id="tl_form.formConfirmationMailText.0">
                 <source>Bestätigungsmail-Inhalt</source>
             </trans-unit>
+            <trans-unit id="tl_form.formConfirmationMailHtml.0">
+                <source>Bestätigungsmail-Inhalt (html)</source>
+            </trans-unit>
 
             <trans-unit id="tl_form.formConfirmationMail_legend">
                 <source>Bestätigungs-E-Mail</source>

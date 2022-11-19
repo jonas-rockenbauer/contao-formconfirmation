@@ -61,6 +61,21 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailText'] = [
     'eval' => ['mandatory' => true, 'rows' => 15, 'allowHTML' => false, 'tl_class' => 'clr'],
     'sql' => 'text NULL',
 ];
+$GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailHtml'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_form']['formConfirmationMailHtml'],
+    'exclude' => true,
+    'filter' => false,
+    'inputType' => 'textarea',
+    'eval' => [
+        'style' => 'min-height: 50px;',
+        'preserveTags' => true,
+        'decodeEntities' => true,
+        'allowHtml' => true,
+        'rte' => 'tinyMCE',
+        'tl_class' => 'clr',
+    ],
+    'sql' => 'text NULL',
+];
 
 // Palettes
 $GLOBALS['TL_DCA']['tl_form']['palettes']['__selector__'][] = 'formConfirmationMailCheck';
@@ -74,5 +89,5 @@ $GLOBALS['TL_DCA']['tl_form']['palettes']['default'] = str_replace(
 array_insert(
     $GLOBALS['TL_DCA']['tl_form']['subpalettes'],
     count($GLOBALS['TL_DCA']['tl_form']['subpalettes']),
-    ['formConfirmationMailCheck' => 'formConfirmationFieldNameRecipient,formConfirmationMailSender,formConfirmationMailSenderName,formConfirmationMailAnswer,formConfirmationMailSubject,formConfirmationMailText']
+    ['formConfirmationMailCheck' => 'formConfirmationFieldNameRecipient,formConfirmationMailSender,formConfirmationMailSenderName,formConfirmationMailAnswer,formConfirmationMailSubject,formConfirmationMailText,formConfirmationMailHtml']
 );
