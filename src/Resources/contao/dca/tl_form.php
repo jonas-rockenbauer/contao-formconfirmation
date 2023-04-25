@@ -71,7 +71,7 @@ $GLOBALS['TL_DCA']['tl_form']['fields']['formConfirmationMailHtml'] = [
         'preserveTags' => true,
         'decodeEntities' => true,
         'allowHtml' => true,
-        'rte' => 'tinyMCE',
+        'rte' => 'ace|html',
         'tl_class' => 'clr',
     ],
     'sql' => 'text NULL',
