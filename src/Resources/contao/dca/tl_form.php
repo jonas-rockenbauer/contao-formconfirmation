@@ -86,7 +86,7 @@ $GLOBALS['TL_DCA']['tl_form']['palettes']['default'] = str_replace(
 );
 
 // Subpalettes
-array_insert(
+Contao\ArrayUtil::arrayInsert(
     $GLOBALS['TL_DCA']['tl_form']['subpalettes'],
     count($GLOBALS['TL_DCA']['tl_form']['subpalettes']),
     ['formConfirmationMailCheck' => 'formConfirmationFieldNameRecipient,formConfirmationMailSender,formConfirmationMailSenderName,formConfirmationMailAnswer,formConfirmationMailSubject,formConfirmationMailText,formConfirmationMailHtml']
